@@ -1,0 +1,52 @@
+﻿@inherits LayoutComponentBase
+
+<div class="app">
+    <div class="background"></div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="name">Austin Beveridge</h1>
+            <p class="role">Junior Software Engineer</p>
+            <nav>
+                <ul>
+                    <li class="@GetSelectedClass("home")" @onclick="@(() => SetPage("home"))">Home</li>
+                    <li class="@GetSelectedClass("projects")" @onclick="@(() => SetPage("projects"))">Projects</li>
+                    <li class="@GetSelectedClass("contact")" @onclick="@(() => SetPage("contact"))">Contact</li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <label>Dark</label>
+                <label>Light</label>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            @if (CurrentPage == "home")
+            {
+                <Pages.Home />
+            }
+            else if (CurrentPage == "projects")
+            {
+                <Pages.Projects />
+            }
+            else if (CurrentPage == "contact")
+            {
+                <Pages.Contact />
+            }
+        </main>
+    </div>
+</div>
+
+@code {
+    private string CurrentPage = "home";
+
+    private void SetPage(string page)
+    {
+        CurrentPage = page;
+    }
+
+    private string GetSelectedClass(string page)
+    {
+        return CurrentPage == page ? "selected" : string.Empty;
+    }
+}
