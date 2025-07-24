@@ -10,6 +10,7 @@ body {
     justify-content: center;
     background-color: #121212;
     overflow: hidden;
+    font-family: 'PP Neue Montreal Book', sans-serif;
 }
 
 .app {
@@ -43,6 +44,7 @@ body {
     padding: 1rem;
     border-right: 1px solid #fff;
     box-sizing: border-box;
+    color: white;
 }
 
 .sidebar .name {
@@ -102,9 +104,9 @@ a {
     text-decoration: inherit;
 }
 
-    a:hover {
-        color: #535bf2;
-    }
+a:hover {
+    color: #535bf2;
+}
 
 button {
     border-radius: 8px;
@@ -118,14 +120,34 @@ button {
     transition: border-color 0.25s;
 }
 
-    button:hover {
-        border-color: #646cff;
-    }
+button:hover {
+    border-color: #646cff;
+}
 
-    button:focus,
-    button:focus-visible {
-        outline: 4px auto -webkit-focus-ring-color;
-    }
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+/*Tech Icons*/
+/*.tech-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.tech-icon-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}*/
+
+
+
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -141,3 +163,5 @@ button {
         background-color: #f9f9f9;
     }
 }
+
+

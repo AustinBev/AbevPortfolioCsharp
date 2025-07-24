@@ -1,0 +1,19 @@
+﻿@code {
+    [Parameter] public string? Name { get; set; }
+}
+
+<div class="tech-icon">
+    <img src=@($"assets/icons/{Name}.svg") alt="@Name" width="48" height="48" />
+</div>
+
+@functions {
+    private string Sanitize(string input)
+    {
+        // Optional cleanup for names with special characters
+        return input
+            .Replace(" ", "")
+            .Replace(".", "")
+            .Replace("(", "")
+            .Replace(")", "");
+    }
+}
