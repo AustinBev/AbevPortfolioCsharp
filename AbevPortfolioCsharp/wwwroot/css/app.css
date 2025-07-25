@@ -1,45 +1,31 @@
 @font-face {
-    font-family: 'PP Neue Montreal Book';
-    src: url('/fonts/ppneuemontreal-book.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'neuemontreal-medium';
+    src: url('../assets/fonts/neuemontreal-Light.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'PP Neue Montreal Medium';
-    src: url('/fonts/ppneuemontreal-medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PP Neue Montreal Bold';
-    src: url('/fonts/ppneuemontreal-bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'neuemontreal-regular';
+    src: url('../assets/fonts/neuemontreal-regular.otf') format('opentype');
 }
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'neuemontreal-regular';
+    color: #aaa;
 }
 
 h1:focus {
     outline: none;
 }
 
-a, .btn-link {
-    color: #0071c1;
-}
-
-.btn-primary {
+framebtn-primary {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+/*.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+}*/
 
 .content {
     padding-top: 1.1rem;
@@ -122,3 +108,25 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+.nav-link.selected {
+    /*    color: black;*/
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-link {
+    color: white;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    font-weight: 400;
+/*    font-family: 'neuemontreal-regular';*/
+}
+
+    .nav-link:hover,
+    .nav-link.selected {
+        opacity: 1;
+        font-weight: 500;
+    }
+

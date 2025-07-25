@@ -2,8 +2,8 @@
 
 <div class="app">
     <div class="background"></div>
-
-    <div class="container">
+    <div class="frame"></div>
+    <div class="layout-container">
         <aside class="sidebar">
             <h1 class="name">Austin Beveridge</h1>
             <p class="role">Junior Software Engineer</p>
@@ -11,8 +11,12 @@
             <NavMenu />
 
             <div class="theme-toggle">
-                <label>Dark</label>
-                <label>Light</label>
+                <div class="toggle-option" data-selected="true">
+                    <span class="checkbox"></span> DARK
+                </div>
+                <div class="toggle-option" data-selected="false">
+                    <span class="checkbox"></span> LIGHT
+                </div>
             </div>
         </aside>
 

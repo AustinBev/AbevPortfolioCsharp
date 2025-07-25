@@ -47,31 +47,40 @@
 }
 
 .nav-item ::deep a {
-    color: white;
-    border-radius: 4px;
-    height: 3rem;
+    transition: color 0.2s ease;
+    height: 1.5rem;
     display: flex;
     align-items: center;
-    line-height: 3rem;
-    font-family: 'PP Neue Montreal Book', sans-serif;
-}
-
-.nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.37);
-    color: white;
 }
 
 .nav-item ::deep a:hover {
-    background-color: rgba(255,255,255,0.1);
     color: white;
 }
 
-.nav-item :is(.nav-link) {
-    color: white !important;
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-.nav-item .nav-link {
-    color: white !important;
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li {
+/*    margin: 0.2rem 0;*/
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+/*    text-transform: uppercase;*/
+    transition: opacity 0.2s ease;
+    list-style-type: none;
+}
+
+.sidebar .name {
+
 }
 
 @media (min-width: 641px) {

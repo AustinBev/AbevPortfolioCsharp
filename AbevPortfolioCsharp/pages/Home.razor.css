@@ -1,0 +1,35 @@
+﻿.tech-stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+    .tech-item:hover {
+        transform: scale(1.15);
+    }
+
+.tech-label {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #ccc;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.tech-item:hover .tech-label {
+    opacity: 1;
+}
+
+
+
+

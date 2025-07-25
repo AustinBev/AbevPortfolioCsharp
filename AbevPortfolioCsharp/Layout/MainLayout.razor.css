@@ -1,4 +1,4 @@
-/* site.css or app.css */
+﻿/* site.css or app.css */
 
 body {
     margin: 0;
@@ -10,14 +10,14 @@ body {
     justify-content: center;
     background-color: #121212;
     overflow: hidden;
-    font-family: 'PP Neue Montreal Book', sans-serif;
+    font-family: 'PP Neue Montreal Book';
 }
 
 .app {
-    position: relative;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .background {
@@ -27,25 +27,62 @@ body {
     background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #1a1a1a 100%);
 }
 
-.container {
+/* ORIGINAL SIZING */
+.layout-container {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
-    right: 4rem;
-    bottom: 4rem;
-    border: 1px solid #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
     display: flex;
+    flex-direction: row;
     box-sizing: border-box;
-    z-index: 1;
+    overflow: hidden;
 }
 
 .sidebar {
-    width: 200px;
+    width: 300px;
     padding: 1rem;
-    border-right: 1px solid #fff;
+/*    border-right: 3px solid #fff;*/
     box-sizing: border-box;
     color: white;
 }
+
+.main-content {
+    flex-grow: 1;
+    width: 100%;
+    min-width: 0;
+    overflow-y: auto;
+    padding: 2rem 2rem 2rem 1rem;
+}
+
+.frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* <- not 9999 */
+    pointer-events: none;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/*.frame {
+    position: fixed;
+    z-index: 9999;
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    border: 1px solid rgba(255,255,255,0.3);
+}*/
+
 
 .sidebar .name {
     font-size: 1.5rem;
@@ -58,39 +95,50 @@ body {
     margin-bottom: 2rem;
 }
 
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar nav li {
-    margin: 0.5rem 0;
-    cursor: pointer;
-    color: white;
-}
-
-.sidebar nav li.selected {
-    font-size: 2rem;
-    line-height: 1;
-}
-
-.main-content {
-    flex: 1;
-    padding: 2rem;
-    box-sizing: border-box;
-    position: relative;
-}
-
 .theme-toggle {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
     display: flex;
-    gap: 1rem;
-    cursor: pointer;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.65rem;
+    font-family: 'neuemontreal-regular';
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
+.toggle-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.toggle-option:hover {
+    opacity: 1;
+}
+
+.toggle-option .checkbox {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-option[data-selected="true"] .checkbox {
+    background-color: white;
+}
+
+.toggle-option[data-selected="false"] .checkbox {
+    background-color: transparent;
+}
+
+
 
 h1 {
     font-size: 3.2em;
@@ -100,7 +148,6 @@ h1 {
 
 a {
     font-weight: 500;
-    color: #646cff;
     text-decoration: inherit;
 }
 
@@ -130,25 +177,6 @@ button:focus-visible {
 }
 
 
-/*Tech Icons*/
-/*.tech-icon {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-}
-
-.tech-icon-img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-}*/
-
-
-
-
 @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
@@ -164,4 +192,15 @@ button:focus-visible {
     }
 }
 
+.name,
+.role {
+    margin: 0;
+    padding-left: 1rem;
+    display: block;
+    line-height: 1.5;
+}
 
+.name {
+    font-family: 'neuemontreal-medium', sans-serif;
+    font-size: 2rem !important; /* adjust as needed */
+}
