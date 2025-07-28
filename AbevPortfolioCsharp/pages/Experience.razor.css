@@ -1,44 +1,24 @@
-﻿.tech-stack-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: flex-start;
-}
-
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.tech-item:hover {
-    transform: scale(1.15);
-}
-
-.tech-label {
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    color: #ccc;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.tech-item:hover .tech-label {
-    opacity: 1;
-}
-
-.experience-title {
+﻿.experience-title {
     font-size: 2rem;
-    font-family: 'neuemontreal-medium';
+    font-family: 'neuemontreal-bold';
     margin-bottom: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 0.5rem;
+    color: white;
 }
 
+/*.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}*/
+
 .experience-section {
+    max-width: 1300px;
+    margin: 4rem auto 2rem auto;
+    padding: 0 1rem;
+    color: #ccc;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -53,12 +33,12 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-    .experience-card h3 {
-        margin-top: 0;
-        font-family: 'neuemontreal-medium';
-        font-size: 1.5rem;
-        margin-bottom: 0.25rem;
-    }
+.experience-card h3 {
+    margin-top: 0;
+    font-family: 'neuemontreal-medium';
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
 
 .job-title {
     font-size: 0.9rem;
@@ -90,7 +70,12 @@
     padding-bottom: 1rem;
 }
 
-h1 {
+.experience-card:hover {
+    transform: scale(1.02);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*h1 {
     font-family: 'neuemontreal-medium';
     color: white;
-}
+}*/

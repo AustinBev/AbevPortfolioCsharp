@@ -1,7 +1,98 @@
 ﻿@page "/projects"
 
-<h3>Projects</h3>
+<PageTitle>Projects</PageTitle>
 
-@code {
+<h1 class="project-title">Projects</h1>
 
-}
+<!-- Wheelhouse Section -->
+<section class="project-section">
+    <h2 class="project-section-title">Wheelhouse Projects</h2>
+    <h4 class="project-section-description">
+        Projects completed in my current role as a Junior Software Engineer at Wheelhouse, focusing on backend automation, client-specific ERP logic, and internal tooling.
+    </h4>
+
+    <div class="project-card">
+        <h3 class="project-name">Replenishment Card Flagging System</h3>
+        <img class="flag-missing-cards" src="/images/FlagMissingCards.png" alt="Flag Missing Cards Screenshot" />
+        <h5>
+            Engineered a global scheduled script to detect and notify missing replenishment cards across tenants, integrating FIFO logic, scan history analysis, and automated Excel exports.
+        </h5>
+    </div>
+
+    <div class="project-card">
+        <h3 class="project-name">Configurator & Tenant Setup Automation</h3>
+        <h5>
+            Migrated legacy product configurators and authored a reusable SQL provisioning script for automated tenant onboarding, with dynamic ID assignment and production-safe constraints.
+        </h5>
+    </div>
+
+    <div class="project-card">
+        <h3 class="project-name">Client-Specific ERP Enhancements</h3>
+        <h5>
+            Delivered onboarding tools, BOM/item import scripts, and dynamic logic using the DINO C# scripting language, tailored to client-specific pricing and production workflows.
+        </h5>
+    </div>
+
+    <div class="project-card">
+        <div class="helpdoc-embed">
+            <a href="https://support.wheelhousemfg.com/" target="_blank" rel="noopener noreferrer">
+                <img class="helpdoc-logo" src="/images/helpdocs.png" alt="Wheelhouse Help Home" />
+            </a>
+
+            <a href="https://support.wheelhousemfg.com/category/wqu11dkk6l-wheelhouse" target="_blank" rel="noopener noreferrer">
+                <div class="helpdoc-preview">
+                    <h4 class="project-name">Wheelhouse Support Documentation</h4>
+                </div>
+            </a>
+        </div>
+
+        <h5>
+            Authored 39 detailed support guides and implementation instructions to support client onboarding and standard operating procedures.
+        </h5>
+    </div>
+
+    <div class="project-card">
+        <a href="https://www.youtube.com/channel/UC2JzmtidRfJNjJNrsyqfE_g" target="_blank" rel="noopener noreferrer">
+            <img class="helpdoc-logo" src="/images/youtube.svg" alt="Wheelhouse Help Home" />
+        </a>
+        <h4 class="project-name">
+            <a href="https://www.youtube.com/channel/UC2JzmtidRfJNjJNrsyqfE_g" target="_blank" rel="noopener noreferrer">
+                YouTube Video Tutorials
+            </a>
+        </h4>
+        <h5>
+            Authored 18 in-depth video tutorials covering core workflows and advanced configurations, improving internal training and external support capabilities.
+        </h5>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/Pb5GXzvdKrI?list=PLjaF0JEmIec_fDGEpiNdFmIwwRKl_QwLm"
+                    title="Wheelhouse YouTube Video Tutorial"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Personal Projects Section -->
+<section class="project-section personal-projects">
+    <h2 class="project-section-title">Personal Projects</h2>
+
+    <div class="project-card">
+        <h3 class="project-name">Yeonjii — AI Cover Letter Generator</h3>
+
+        <a href="https://yeonjii.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <img src="images/YeonjiiThumb.png" alt="Yeonjii Project Thumbnail" />
+        </a>
+
+        <h5>
+            I worked with a team of four including a Product Manager, UI/UX Designer, and Frontend Developer during an 8-week AGILE sprint as the sole backend developer. After the sprint, team members split for other work, but I’m currently rebuilding it as an open-source tool.
+        </h5>
+
+        <h4>
+            <a href="https://www.joincolab.io/product/Yeonjii-dcfd4" target="_blank" rel="noopener noreferrer">
+                Read the Co.Lab Article →
+            </a>
+        </h4>
+    </div>
+</section>

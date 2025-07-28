@@ -8,6 +8,11 @@
     src: url('../assets/fonts/neuemontreal-regular.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'neuemontreal-bold';
+    src: url('../assets/fonts/neuemontreal-bold.otf') format('opentype');
+}
+
 html, body {
     font-family: 'neuemontreal-regular';
     color: #aaa;

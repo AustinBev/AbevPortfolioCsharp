@@ -2,3 +2,82 @@
 
 <PageTitle>Home</PageTitle>
 
+<section class="about-me-section">
+    <div class="about-header">
+        <img src="@CurrentImage" class="headshot" alt="Austin Beveridge" />
+    </div>
+    <div class="toggle-row">
+        <span class="toggle-label">
+            @(CurrentImage == PixelImage ? "Pixel" : "Photo")
+        </span>
+
+        <label class="switch">
+            <!-- Reflect state in the UI without @bind -->
+            <input type="checkbox"
+                   checked="@(CurrentImage == RealImage)"
+                   @onchange="ToggleHeadshot"
+                   aria-label="Toggle headshot between pixel and photo" />
+            <span class="slider" aria-hidden="true"></span>
+        </label>
+    </div>
+    <div class="intro-text">
+        <h2>About Me</h2>
+        <h5>
+            I’m a Junior Software Engineer at Ridgeline Solutions, building tools for our Manufacturing Operations
+            platform, <em>Wheelhouse</em>.
+        </h5>
+        <h5>I'm glad you’re here, feel free to reach out or say hi.</h5>
+    </div>
+</section>
+
+
+
+
+
+<section class="tech-stack">
+    <h2>Tech Stack</h2>
+    <h5>While I have experience with the technologies below, I don't tie myself to a single stack. I focus on learning what's best suited for the problem at hand.</h5>
+    
+    <div class="icon-section" >
+        <div class="tech-stack-div">
+            <h4>Languages & Frameworks</h4>
+            <div class="tech-stack-icons">
+                <div class="tech-item"><TechIcon Name="CSharp" /><span class="tech-label">C#</span></div>
+                <div class="tech-item"><TechIcon Name="Python" /><span class="tech-label">Python</span></div>
+                <div class="tech-item"><TechIcon Name="JavaScript" /><span class="tech-label">JavaScript</span></div>
+                <div class="tech-item"><TechIcon Name="TypeScript" /><span class="tech-label">TypeScript</span></div>
+                <div class="tech-item"><TechIcon Name="HTML5" /><span class="tech-label">HTML5</span></div>
+                <div class="tech-item"><TechIcon Name="CSS3" /><span class="tech-label">CSS3</span></div>
+                <div class="tech-item"><TechIcon Name="NET" /><span class="tech-label">.NET Framework</span></div>
+                <div class="tech-item"><TechIcon Name="Flask" /><span class="tech-label"></span></div>
+                <div class="tech-item"><TechIcon Name="React" /><span class="tech-label">React</span></div>
+                <div class="tech-item"><TechIcon Name="Tailwind CSS" /><span class="tech-label">TailwindCSS</span></div>
+                <div class="tech-item"><TechIcon Name="Node.js" /><span class="tech-label">Node.js</span></div>
+            </div>
+        </div>
+
+
+        
+        <div class="tech-stack-div">
+            <h4>Databases</h4>
+            <div class="tech-stack-icons">
+                <div class="tech-item"><TechIcon Name="PostgresSQL" /><span class="tech-label">PostgreSQL</span></div>
+                <div class="tech-item"><TechIcon Name="Redis" /><span class="tech-label">Redis</span></div>
+                <div class="tech-item"><TechIcon Name="DBeaver" /><span class="tech-label">DBeaver</span></div>
+            </div>
+        </div>
+
+        <div class="tech-stack-div">
+            <h4>Tools & DevOps</h4>
+            <div class="tech-stack-icons">
+                <div class="tech-item"><TechIcon Name="Git" /><span class="tech-label">Git</span></div>
+                <div class="tech-item"><TechIcon Name="Firebase" /><span class="tech-label">Firebase</span></div>
+                <div class="tech-item"><TechIcon Name="Visual Studio" /><span class="tech-label">Visual Studio</span></div>
+                <div class="tech-item"><TechIcon Name="VS Code" /><span class="tech-label">VS Code</span></div>
+                <div class="tech-item"><TechIcon Name="Vite.js" /><span class="tech-label">Vite.js</span></div>
+                <div class="tech-item"><TechIcon Name="JSON" /><span class="tech-label">JSON</span></div>
+            </div>
+        </div>
+    </div>
+    
+</section>
