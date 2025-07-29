@@ -1,0 +1,95 @@
+﻿@using AbevPortfolioCsharp.Models
+@inject AbevPortfolioCsharp.Services.IContactService ContactService
+@inject IJSRuntime JS
+
+<EditForm Model="@model" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="grid">
+        <div class="field">
+            <label>Name</label>
+            <InputText class="input" @bind-Value="model.Name" />
+            <ValidationMessage For="() => model.Name" />
+        </div>
+
+        <div class="field">
+            <label>Email <span class="muted">(work email preferred)</span></label>
+            <InputText class="input" @bind-Value="model.Email" />
+            <ValidationMessage For="() => model.Email" />
+        </div>
+
+        <div class="field full">
+            <label>Verification link <span class="muted">(LinkedIn, GitHub, company or JD)</span></label>
+            <InputText class="input" @bind-Value="model.VerificationUrl" />
+            <ValidationMessage For="() => model.VerificationUrl" />
+        </div>
+
+        <div class="field full">
+            <label>Message <span class="muted">(optional, 1–2 sentences)</span></label>
+            <InputTextArea class="input textarea" rows="4" @bind-Value="model.Message" />
+        </div>
+
+        <!-- Honeypot -->
+        <input class="hp" @bind="model.Hp" autocomplete="off" tabindex="-1" aria-hidden="true" />
+    </div>
+
+    <!-- Turnstile widget -->
+    <div class="cf-turnstile"
+         data-sitekey="YOUR_TURNSTILE_SITE_KEY"
+         data-theme="dark"
+         data-callback="cfTurnstile.onSuccess"></div>
+
+    <button class="btn" disabled="@sending">@((sending ? "Sending…" : "Send"))</button>
+
+    @if (!string.IsNullOrEmpty(status))
+    {
+        <p class="@statusClass">@status</p>
+    }
+</EditForm>
+
+@code {
+    private readonly MinimalContactRequest model = new();
+    private bool sending;
+    private string? status;
+    private string statusClass = "status";
+    private DateTime renderedAtUtc;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender) renderedAtUtc = DateTime.UtcNow;
+    }
+
+    private async Task HandleSubmit()
+    {
+        model.SecondsToSubmit = (int)(DateTime.UtcNow - renderedAtUtc).TotalSeconds;
+
+        var token = await JS.InvokeAsync<string>("cfTurnstile.getToken");
+        if (string.IsNullOrWhiteSpace(token))
+        {
+            status = "Please complete verification.";
+            statusClass = "status error";
+            return;
+        }
+        model.TurnstileToken = token;
+
+        sending = true; status = null;
+        var ok = await ContactService.SendAsync(model);
+        sending = false;
+
+        await JS.InvokeVoidAsync("cfTurnstile.reset");
+        renderedAtUtc = DateTime.UtcNow;
+
+        if (ok)
+        {
+            status = "Thanks — I’ll review and reply soon.";
+            statusClass = "status ok";
+            model.Name = model.Email = model.VerificationUrl = model.Message = model.Hp = "";
+        }
+        else
+        {
+            status = "Something went wrong. Try again in a minute.";
+            statusClass = "status error";
+        }
+    }
+}
