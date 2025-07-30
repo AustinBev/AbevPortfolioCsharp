@@ -1,0 +1,46 @@
+name: Deploy Blazor WebAssembly to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]      # or main – match your default branch
+  workflow_dispatch:           # manual “Run workflow” button
+
+permissions:
+  contents: write              # required to push to gh-pages
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🛎️  Checkout source
+      uses: actions/checkout@v4
+
+    - name: 🛠️  Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: "8.0.x"
+
+    - name: 📦  Restore WASM workload
+      run: dotnet workload install wasm-tools
+
+    - name: 🏗️  Publish Blazor app
+      run: dotnet publish AbevPortfolioCsharp.csproj -c Release -o publish
+
+    # ── GitHub-Pages quirks ───────────────────────────────────────────────
+    - name: ✏️  Rewrite <base href>
+      uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
+      with:
+        html_path:   publish/wwwroot/index.html
+        base_href:   /${{ github.event.repository.name }}/
+    - name: 🪄  Add 404.html for SPA routing
+      run: cp publish/wwwroot/index.html publish/wwwroot/404.html
+    - name: 🚫  Disable Jekyll
+      run: touch publish/wwwroot/.nojekyll
+    # ──────────────────────────────────────────────────────────────────────
+
+    - name: 🚀  Deploy to gh-pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages          # target branch
+        folder: publish/wwwroot   # what we just built
