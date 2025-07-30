@@ -6,7 +6,7 @@ namespace AbevPortfolioCsharp.Pages
     {
         protected string PixelImage = "/images/PixelAustin.png";
         protected string RealImage = "/images/ABEV2.jpg";
-        protected string CurrentImage;
+        protected string CurrentImage = default!;
 
         protected override void OnInitialized()
         {
