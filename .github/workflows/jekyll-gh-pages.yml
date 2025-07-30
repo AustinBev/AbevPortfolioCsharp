@@ -25,7 +25,7 @@ jobs:
       run: dotnet workload install wasm-tools
 
     - name: 🏗️  Publish Blazor app
-      run: dotnet publish AbevPortfolioCsharp.csproj -c Release -o publish
+      run: dotnet publish AbevPortfolioCsharp/AbevPortfolioCsharp.csproj -c Release -o publish
 
     # ── GitHub-Pages quirks ───────────────────────────────────────────────
     - name: ✏️  Rewrite <base href>
