@@ -4,6 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ⬇️  lets browsers load embedded fonts (data: URIs) -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   font-src  'self' data:;
+                   style-src 'self' 'unsafe-inline';
+                   img-src   'self' data:">
+
     <title>AbevPortfolioCsharp</title>
     <base href="/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
@@ -14,6 +22,8 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Your tiny interop (local). Place after the CF script and before your form runs -->
     <script src="JS/turnstile-interop.js"></script>
+
+
 </head>
 
 <body>
