@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace AbevPortfolioCsharp.pages
+namespace AbevPortfolioCsharp.Pages
 {
     public partial class Home : ComponentBase
     {
