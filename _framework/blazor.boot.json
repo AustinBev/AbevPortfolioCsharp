@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AbevPortfolioCsharp",
   "resources": {
-    "hash": "sha256-V+hYYZth2VR5p1Q1ohxdHPUCmRXapBfaNyF61zQkdAY=",
+    "hash": "sha256-w6Ht1Vo3Gka6e6BrhTFqbcL3ETF4GOALjxGyXgrZFE8=",
     "jsModuleNative": {
       "dotnet.native.8.0.18.avssow4tio.js": "sha256-GdCwLC24+WqU6n9qZ97tnrxgHdKaZ3Q4/O0BzIGyi44="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "AbevPortfolioCsharp.wasm": "sha256-sCG9z6k0522OAhMNby9HVTLjBa0m/0IiettsSXMaLEI=",
+      "AbevPortfolioCsharp.wasm": "sha256-mg9cZMu2VHEhPygftG78fcPywnackNfNAISEej5nEks=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-45Ntq30TZCJ67yquZVoU9jXiTf32PowdfYuz8wD5qRc=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-9eH0ALENpaTq8AwfwzVe7l1UOYNXGOHBxyWvhHmll7U=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-YwNXDDqKR6TBV+2nf9iwhC47Adu1H3dRDtie6ePu83A=",
