@@ -14,8 +14,10 @@
 }
 
 html, body {
-    font-family: 'neuemontreal-regular';
+/*    min-height: 100%;*/
+/*    font-family: 'neuemontreal-regular';*/
     color: #aaa;
+    background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #1a1a1a 100%);
 }
 
 h1:focus {
@@ -126,12 +128,94 @@ code {
     opacity: 0.6;
     transition: opacity 0.2s ease;
     font-weight: 400;
-/*    font-family: 'neuemontreal-regular';*/
+    font-family: 'neuemontreal-medium';
 }
 
-    .nav-link:hover,
-    .nav-link.selected {
-        opacity: 1;
-        font-weight: 500;
-    }
+.nav-link:hover,
+.nav-link.selected {
+    opacity: 1;
+    font-weight: 500;
+}
 
+/* Loading */
+.splash {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: #0b0b0c; /* solid dark background */
+    color: #eaeaea;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Put name + Portfolio on one line */
+.splash .splash-inner {
+    display: flex;
+    align-items: baseline; /* keeps baselines aligned */
+    gap: 0.6ch; /* small spacing between name and Portfolio */
+    flex-wrap: wrap; /* lets caption drop to its own line if needed */
+    text-align: center;
+}
+
+/* Make sure your existing .tagline doesn’t push to a new line */
+.splash .tagline {
+    padding: 0; /* override your previous padding-top */
+}
+
+/* Tech caption pinned near bottom center of the splash */
+.splash .tech-caption {
+    position: absolute;
+    left: 50%;
+    bottom: 8vh; /* move up/down as you like */
+    transform: translateX(-50%);
+}
+
+/* Fade sequencing when splash is dismissed */
+.splash .logo,
+.splash .tagline {
+    transition: opacity .28s ease, transform .28s ease;
+    will-change: opacity, transform;
+}
+
+.splash.done .tagline {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition-delay: 0s; /* fade Portfolio first */
+}
+
+.splash.done .logo {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition-delay: .15s; /* then your name */
+}
+
+/* Container fade after text fades (keeps the sequence visible) */
+.splash {
+    transition: opacity .25s ease .22s, transform .25s ease .22s;
+}
+
+/*.splash.done {
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
+}*/
+
+.logo {
+    font-family: 'neuemontreal-medium';
+    font-size: 2rem !important;  adjust as needed 
+}
+
+.tagline {
+    font-family: 'neuemontreal-bold';
+    font-size: 3rem !important;
+    padding-top: 2rem;
+}
+
+.tech-caption {
+    font-family: 'neuemontreal-medium';
+    font-size: 1rem !important;
+    padding-top: 2rem;
+}

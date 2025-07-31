@@ -1,0 +1,259 @@
+﻿.about-me-section, .tech-stack {
+    max-width: 1300px;
+    margin: 4rem auto 2rem auto;
+    padding: 0 1rem;
+    color: #ccc;
+}
+
+.about-me-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.intro-text p {
+    margin-top: 0.5rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.about-me-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    margin-top: 2rem;
+}
+
+/* light-blue “Resume” button */
+.resume-button {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4ba8ff 0%, #2387ff 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    margin-left: 5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.45rem 1.5rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4ba8ff 0%, #2387ff 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 2px solid transparent;
+    margin: 1rem;
+}
+
+
+.resume-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.resume-button:active {
+    transform: translateY( 0);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+.resume-button:focus-visible {
+    outline: none;
+    border-color: #add8ff;
+    box-shadow: 0 0 0 3px rgba(173,216,255,0.6), 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.tech-stack {
+    margin-top: 5rem;
+}
+
+.tech-stack-div {
+    margin-bottom: 1rem;
+}
+
+.tech-stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.tech-item:hover {
+    transform: scale(1.15);
+}
+
+.tech-label {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #ccc;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.tech-item:hover .tech-label {
+    opacity: 1;
+}
+
+.about-me-card .headshot {
+    width: 10%;
+}
+
+.icon-section {
+    margin-top: 3rem;
+}
+
+.icon-section .tech-stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.tech-item:hover {
+    transform: scale(1.15);
+}
+
+.tech-label {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #ccc;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.tech-item:hover .tech-label {
+    opacity: 1;
+}
+
+/* Toggle layout */
+.toggle-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.toggle-label {
+    color: #ebebeb;
+    font-size: 0.95rem;
+}
+
+/* Switch control */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.22);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 9999px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+}
+
+/* Checked (photo) state */
+.switch input:checked + .slider {
+    background: #87cfff;
+    border-color: rgba(135,207,255,0.6);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+/* Keyboard focus */
+.switch input:focus + .slider {
+    box-shadow: 0 0 0 3px rgba(135,207,255,0.35);
+}
+
+/* ONE definition only */
+.headshot {
+    width: clamp(96px, 18vw, 160px);
+    aspect-ratio: 2/3;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10%;
+    display: block;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    image-rendering: auto;
+}
+
+/*.headshot {
+    width: clamp(96px, 12vw, 120px);
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10%;
+    display: block;
+}*/
+
+.intro-text .wheelhouse {
+    color: skyblue;
+}

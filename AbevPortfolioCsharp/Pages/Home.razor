@@ -20,21 +20,40 @@
             <span class="slider" aria-hidden="true"></span>
         </label>
     </div>
+    <!-- Button -->
+    <button class="resume-button"
+            data-bs-toggle="modal"
+            data-bs-target="#resumeModal">
+        Résumé
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="resumeLabel">Résumé – Austin Beveridge</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body p-0" style="height:80vh;">
+                    <iframe src="@($"{Resume}#pagemode=none&navpanes=0")"
+                            style="width:100%;height:100%;border:none;">
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="intro-text">
-        <h2>About Me</h2>
+        @* <h2>About Me</h2> *@
         <h5>
-            I’m a Junior Software Engineer at Ridgeline Solutions, building tools for our Manufacturing Operations
-            platform,
+            I’m a Junior Software Engineer at Ridgeline Solutions, building tools for our Manufacturing Operations Management platform,
             <a href="https://wheelhousemfg.com/" target="_blank" rel="noopener noreferrer">
                 <em class="wheelhouse">Wheelhouse.</em>
             </a>
         </h5>
-    </div>
-    <div class="resume-div">
-        <a href="https://support.wheelhousemfg.com/" target="_blank" rel="noopener noreferrer">
-            <button class="resume-button">Resume</button>
-        </a>
-        
     </div>
 </section>
 

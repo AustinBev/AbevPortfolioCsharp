@@ -79,10 +79,6 @@ nav ul {
     list-style-type: none;
 }
 
-.sidebar .name {
-
-}
-
 @media (min-width: 641px) {
     .navbar-toggler {
         display: none;

@@ -1,7 +1,12 @@
-﻿.grid {
+﻿body {
+/*    font-family: 'neuemontreal-medium';*/
+}
+
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
+/*    font-family: 'neuemontreal-medium';*/
 }
 
 .field {
@@ -10,9 +15,9 @@
     gap: 6px;
 }
 
-    .field.full {
-        grid-column: 1 / -1;
-    }
+.field.full {
+    grid-column: 1 / -1;
+}
 
 label {
     font-weight: 600;
@@ -32,10 +37,10 @@ label {
     outline: none;
 }
 
-    .input:focus {
-        border-color: #fff;
-        box-shadow: 0 0 0 3px rgba(255,255,255,.15);
-    }
+.input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,.15);
+}
 
 .textarea {
     resize: vertical;
@@ -50,18 +55,38 @@ label {
 }
 
 .btn {
-    margin-top: 6px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,.35);
-    background: linear-gradient(to bottom, rgba(255,255,255,.06), rgba(255,255,255,.02));
-    cursor: pointer;
+    display: inline-block;
+    padding: 0.45rem 1.5rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4ba8ff 0%, #2387ff 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 2px solid transparent;
+    margin: 1rem;
 }
 
-    .btn[disabled] {
-        opacity: .6;
-        cursor: not-allowed;
-    }
+.resume-button {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: 'neuemontreal-medium', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4ba8ff 0%, #2387ff 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    margin-left: 5rem;
+}
+
+.btn[disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+}
 
 .status {
     margin-top: 10px;

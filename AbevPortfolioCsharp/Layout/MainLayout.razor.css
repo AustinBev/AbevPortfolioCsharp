@@ -10,7 +10,7 @@ body {
     justify-content: center;
     background-color: #121212;
     overflow: hidden;
-    font-family: 'PP Neue Montreal Book';
+/*    font-family: 'neuemontreal-medium';*/
 }
 
 .app {
@@ -50,6 +50,7 @@ body {
 /*    border-right: 3px solid #fff;*/
     box-sizing: border-box;
     color: white;
+    font-family: 'neuemontreal-regular';
 }
 
 .main-content {
@@ -103,7 +104,7 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     font-size: 0.65rem;
-    font-family: 'neuemontreal-regular';
+/*    font-family: 'neuemontreal-regular';*/
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -201,6 +202,6 @@ button:focus-visible {
 }
 
 .name {
-    font-family: 'neuemontreal-medium', sans-serif;
+    font-family: 'neuemontreal-medium';
     font-size: 2rem !important; /* adjust as needed */
 }

@@ -8,6 +8,8 @@ namespace AbevPortfolioCsharp.Pages
         protected string RealImage = "/images/ABEV2.jpg";
         protected string CurrentImage = default!;
 
+        protected string Resume = "/images/resume/AbeveridgeResume.pdf";
+
         protected override void OnInitialized()
         {
             CurrentImage = PixelImage;
