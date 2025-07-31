@@ -9,7 +9,7 @@ namespace AbevPortfolioCsharp.Services
 #if DEBUG
         private const string BackendBase = "http://localhost:7071";
 #else
-  private const string BackendBase = "https://AbevPortfolioAzureFunction.azurewebsites.net";
+        private const string BackendBase = "https://abevportfolioazurefunction-c3fydjaufebaejg7.centralus-01.azurewebsites.net";
 #endif
         public ApiContactService(HttpClient http) => _http = http;
 
