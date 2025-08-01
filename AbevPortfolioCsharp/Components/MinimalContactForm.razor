@@ -37,7 +37,9 @@
     <!-- Explicitly rendered widget -->
     <div @ref="_tsDiv"></div>
 
-    <button class="btn" disabled="@sending">@((sending ? "Sending…" : "Send"))</button>
+    <button class="btn" disabled="@(sending || !turnstileReady)">
+        @((sending ? "Sending…" : "Send"))
+    </button>
 
     @if (!string.IsNullOrEmpty(status))
     {
@@ -47,21 +49,31 @@
 
 @code {
     private readonly MinimalContactRequest model = new();
-    private ElementReference _tsDiv;   // <— reference to the empty <div>
+    private ElementReference _tsDiv;
     private bool sending;
     private string? status;
     private string statusClass = "status";
     private DateTime renderedAtUtc;
 
+    private bool turnstileReady = false;
+    private DotNetObjectReference<MinimalContactForm>? _dotNetRef;
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            // Render the widget once the element is in the DOM
+            _dotNetRef = DotNetObjectReference.Create(this);
             await JS.InvokeVoidAsync(
-                "cfTurnstile.renderWidget", _tsDiv, "0x4AAAAAABnePV_sFwqcvEMm");
+                "cfTurnstile.renderWidget", _tsDiv, "0x4AAAAAABnePV_sFwqcvEMm", _dotNetRef);
             renderedAtUtc = DateTime.UtcNow;
         }
+    }
+
+    [JSInvokable]
+    public void OnTurnstileReady()
+    {
+        turnstileReady = true;
+        StateHasChanged();
     }
 
     private async Task HandleSubmit()
@@ -82,11 +94,13 @@
         sending = false;
 
         await JS.InvokeVoidAsync("cfTurnstile.reset");
+        turnstileReady = false;
         renderedAtUtc = DateTime.UtcNow;
 
         status = ok ? "Thanks — I’ll review and reply soon."
-                            : "Something went wrong. Try again in a minute.";
+                    : "Something went wrong. Try again in a minute.";
         statusClass = ok ? "status ok" : "status error";
         if (ok) model.Name = model.Email = model.VerificationUrl = model.Message = model.Hp = "";
     }
 }
+
