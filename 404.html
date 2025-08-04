@@ -34,7 +34,7 @@
             <div class="logo">Austin Beveridge</div>
             <div class="tagline">Portfolio</div>
 
-            <div class="tech-caption">Blazor WASG & Azure Functions</div>
+            <div class="tech-caption">Blazor WASM & Azure Functions</div>
         </div>
     </div>
 
@@ -54,7 +54,12 @@
         }).then(() => {
             sessionStorage.setItem("seenSplash", "1");
             const s = document.getElementById("splash");
-            if (s) { s.classList.add("done"); setTimeout(() => s.remove(), 250); }
+            if (s) {
+                setTimeout(() => {
+                    s.classList.add("done");
+                    setTimeout(() => s.remove(), 700);
+                }, 100);
+            }
         });
     </script>
 </body>
