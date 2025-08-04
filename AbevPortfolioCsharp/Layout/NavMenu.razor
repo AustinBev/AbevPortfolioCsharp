@@ -13,4 +13,32 @@
             <NavLink href="/contact" class="nav-link" activeClass="selected">Contact</NavLink>
         </li>
     </ul>
+
+    <!-- Resume Button -->
+    <button class="resume-button"
+            data-bs-toggle="modal"
+            data-bs-target="#resumeModal">
+        Résumé
+    </button>
+
+    <!-- Resume Modal -->
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="resumeLabel">Résumé – Austin Beveridge</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0" style="height:80vh;">
+                    <iframe src="@Resume#pagemode=none&navpanes=0"
+                            style="width:100%;height:100%;border:none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>
+
+@code {
+    private string Resume => "/images/resume/AbeveridgeResume.pdf";
+}

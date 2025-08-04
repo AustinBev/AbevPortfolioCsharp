@@ -1,4 +1,9 @@
-﻿.about-me-section, .tech-stack {
+﻿
+h2 {
+    border-left: 4px solid #87cfff;
+    padding-left: 0.75rem;
+}
+.about-me-section, .tech-stack {
     max-width: 1300px;
     margin: 4rem auto 2rem auto;
     padding: 0 1rem;
@@ -41,55 +46,8 @@
     margin-top: 2rem;
 }
 
-/* light-blue “Resume” button */
-.resume-button {
-    display: inline-block;
-    padding: 0.65rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 0.03em;
-    color: #ffffff;
-    background: linear-gradient(135deg, #4ba8ff 0%, #2387ff 100%);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    border: 2px solid transparent;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-    margin-left: 5rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.45rem 1.5rem;
-    border-radius: 1.5rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 0.03em;
-    color: #ffffff;
-    background: linear-gradient(135deg, #4ba8ff 0%, #2387ff 100%);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    border: 2px solid transparent;
-    margin: 1rem;
-}
-
-
-.resume-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-}
-
-.resume-button:active {
-    transform: translateY( 0);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-}
-
-.resume-button:focus-visible {
-    outline: none;
-    border-color: #add8ff;
-    box-shadow: 0 0 0 3px rgba(173,216,255,0.6), 0 4px 12px rgba(0,0,0,0.25);
-}
-
 .tech-stack {
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .tech-stack-div {
@@ -174,6 +132,7 @@
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
+    margin-left: 1.5rem;
 }
 
 .toggle-label {
