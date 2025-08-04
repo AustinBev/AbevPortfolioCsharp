@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AbevPortfolioCsharp",
   "resources": {
-    "hash": "sha256-Eswo1mt8wBZi8wnKW2hSOsxvgiBQXE+oJqiiGKKW0XU=",
+    "hash": "sha256-p0msBnSSbEaZN3Snj2fG3bHTtgXQV7va7C7/Oai0Ugg=",
     "jsModuleNative": {
       "dotnet.native.8.0.18.avssow4tio.js": "sha256-GdCwLC24+WqU6n9qZ97tnrxgHdKaZ3Q4/O0BzIGyi44="
     },
@@ -17,10 +17,10 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "AbevPortfolioCsharp.wasm": "sha256-q0/FL+4AzGXdu1ki0lvMPXFS4/K4MbxcOCrC95NMWW0=",
+      "AbevPortfolioCsharp.wasm": "sha256-jJM+zJ4YPM/q7LKjGh52zeZHvdVZxtU3CMcGGXMujoY=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-45Ntq30TZCJ67yquZVoU9jXiTf32PowdfYuz8wD5qRc=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-9eH0ALENpaTq8AwfwzVe7l1UOYNXGOHBxyWvhHmll7U=",
-      "Microsoft.AspNetCore.Components.Web.wasm": "sha256-YwNXDDqKR6TBV+2nf9iwhC47Adu1H3dRDtie6ePu83A=",
+      "Microsoft.AspNetCore.Components.Web.wasm": "sha256-7lsfgFF95f2A2S4aKoIWPD+BwaZi1aIa/hyAcrgpLY4=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-WZsOd2imyPSqhV5/DHQpOghjuGCVAi3RSUSmTPRcHQY=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-87sn2TYqgdZ95sXmavjKEzoEfMgHnYQ9LOvnMX+aZcI=",
       "Microsoft.Extensions.Configuration.Json.wasm": "sha256-/VUEfhgVp9FCU1rXnSNAI1mtW6EO5DpkV/5UNWDR/es=",
