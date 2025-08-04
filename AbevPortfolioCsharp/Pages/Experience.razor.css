@@ -4,6 +4,7 @@
     margin-bottom: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 0.5rem;
+    padding-left: 1rem;
     color: white;
 }
 
@@ -79,10 +80,7 @@
     font-family: 'neuemontreal-medium';
     color: white;
 }*/
-```
 
-Projects.razor.css:
-```
 h1, h2, h3, h4 {
     font-family: 'neuemontreal-medium';
     color: white;

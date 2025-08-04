@@ -3,17 +3,21 @@ h2 {
     border-left: 4px solid #87cfff;
     padding-left: 0.75rem;
 }
-.about-me-section, .tech-stack {
+
+.about-me-section {
+    margin: 1rem auto 2rem auto;
+}
+
+.tech-stack {
     max-width: 1300px;
     margin: 4rem auto 2rem auto;
-    padding: 0 1rem;
+    /*    padding: 0 1rem;*/
     color: #ccc;
 }
 
 .about-me-section h2 {
     font-size: 2rem;
     color: white;
-    margin-bottom: 1.5rem;
 }
 
 .about-header {
@@ -24,11 +28,11 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-.intro-text h3 {
+/*.intro-text h3 {
     margin: 0;
     font-size: 1.5rem;
     color: #fff;
-}
+}*/
 
 .intro-text p {
     margin-top: 0.5rem;
@@ -39,7 +43,6 @@ h2 {
 .about-me-section p {
     font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 1rem;
 }
 
 .intro-text {
@@ -128,11 +131,11 @@ h2 {
 
 /* Toggle layout */
 .toggle-row {
-    display: inline-flex;
+    display: flex; /* make it a block-level flex container */
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
-    margin-left: 1.5rem;
+    margin: 0.75rem auto 0 auto; /* centers it horizontally */
+    justify-content: center; /* centers content inside the row */
 }
 
 .toggle-label {
@@ -194,6 +197,8 @@ h2 {
 
 /* ONE definition only */
 .headshot {
+    margin: 0 auto;
+    margin-top: 1rem;
     width: clamp(96px, 18vw, 160px);
     aspect-ratio: 2/3;
     height: auto;
@@ -205,14 +210,45 @@ h2 {
     image-rendering: auto;
 }
 
-/*.headshot {
-    width: clamp(96px, 12vw, 120px);
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
-    border-radius: 10%;
-    display: block;
-}*/
+.intro-text {
+    display: flex; /* make it a block-level flex container */
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.75rem auto 0 auto; /* centers it horizontally */
+    padding-top: 1rem;
+    justify-content: center; /* centers content inside the row */
+}
 
 .intro-text .wheelhouse {
     color: skyblue;
+}
+
+@media (max-width: 700px) {
+    .tech-stack-icons {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 1.25rem 0.5rem;
+        justify-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tech-item {
+        width: 100%;
+        margin: 0.4rem 0;
+        align-items: center;
+    }
+
+    .tech-label {
+        font-size: 1.05rem !important;
+        opacity: 1; /* Always visible on mobile for better UX */
+        margin-top: 0.5rem;
+    }
+
+    /* Make icons bigger on mobile if you want */
+    .tech-item svg,
+    .tech-item img {
+        width: 42px !important;
+        height: 42px !important;
+    }
 }

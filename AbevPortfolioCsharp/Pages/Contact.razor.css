@@ -163,7 +163,7 @@ label {
     color: #ff6b6b;
 }
 
-@media (max-width:720px) {
+@media (max-width:700px) {
     .grid {
         grid-template-columns: 1fr;
     }
@@ -172,5 +172,9 @@ label {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+    }
+
+    .contact-section {
+        margin-top: 0;
     }
 }

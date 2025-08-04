@@ -1,8 +1,4 @@
-﻿body {
-/*    font-family: 'neuemontreal-medium';*/
-}
-
-.grid {
+﻿.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
@@ -101,7 +97,7 @@ label {
         color: #ff6b6b;
     }
 
-@media (max-width:720px) {
+@media (max-width:700px) {
     .grid {
         grid-template-columns: 1fr;
     }

@@ -1,5 +1,5 @@
 ﻿h1, h2, h3, h4 {
-    font-family: 'neuemontreal-medium';
+/*    font-family: 'neuemontreal-medium';*/
     color: white;
 }
 
@@ -10,11 +10,12 @@
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 0.5rem;
     color: white;
+    padding-left: 1rem;
 }
 
 .project-card .project-name {
     color: #87cfff;
-    font-family: 'neuemontreal-medium';
+/*    font-family: 'neuemontreal-medium';*/
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
@@ -52,7 +53,7 @@
 .project-card h3,
 .project-card h4 {
     margin-top: 0;
-    font-family: 'neuemontreal-medium';
+/*    font-family: 'neuemontreal-medium';*/
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: #fff;
@@ -63,7 +64,7 @@
     line-height: 1.6;
     color: #ccc;
     margin-bottom: 1rem;
-    font-family: 'neuemontreal-regular';
+/*    font-family: 'neuemontreal-regular';*/
 }
 
 .project-card a {

@@ -1,25 +1,26 @@
 ﻿<nav>
-    <ul>
+    <button class="hamburger" @onclick="ToggleMenu" aria-label="Open menu">
+        &#9776;
+    </button>
+    <ul class="nav-list @( _menuOpen ? "open" : "")">
         <li class="nav-item">
-            <NavLink href="/" class="nav-link" activeClass="selected" Match="NavLinkMatch.All">Home</NavLink>
+            <NavLink href="/" class="nav-link" activeClass="selected" Match="NavLinkMatch.All" @onclick="CloseMenu">Home</NavLink>
         </li>
         <li class="nav-item">
-            <NavLink href="/experience" class="nav-link" activeClass="selected">Experience</NavLink>
+            <NavLink href="/experience" class="nav-link" activeClass="selected" @onclick="CloseMenu">Experience</NavLink>
         </li>
         <li class="nav-item">
-            <NavLink href="/projects" class="nav-link" activeClass="selected">Projects</NavLink>
+            <NavLink href="/projects" class="nav-link" activeClass="selected" @onclick="CloseMenu">Projects</NavLink>
         </li>
         <li class="nav-item">
-            <NavLink href="/contact" class="nav-link" activeClass="selected">Contact</NavLink>
+            <NavLink href="/contact" class="nav-link" activeClass="selected" @onclick="CloseMenu">Contact</NavLink>
+        </li>
+        <li>
+            <button class="resume-button" data-bs-toggle="modal" data-bs-target="#resumeModal" @onclick:stopPropagation="true">
+                Résumé
+            </button>
         </li>
     </ul>
-
-    <!-- Resume Button -->
-    <button class="resume-button"
-            data-bs-toggle="modal"
-            data-bs-target="#resumeModal">
-        Résumé
-    </button>
 
     <!-- Resume Modal -->
     <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeLabel">
@@ -40,5 +41,8 @@
 </nav>
 
 @code {
+    private bool _menuOpen = false;
+    private void ToggleMenu() => _menuOpen = !_menuOpen;
+    private void CloseMenu() => _menuOpen = false;
     private string Resume => "/images/resume/AbeveridgeResume.pdf";
 }
