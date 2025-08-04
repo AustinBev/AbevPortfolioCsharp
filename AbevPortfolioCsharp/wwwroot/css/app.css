@@ -156,7 +156,7 @@ code {
     color: #eaeaea;
     opacity: 1;
     transform: translateY(0);
-    transition: opacity .25s ease, transform .25s ease;
+    transition: opacity 0.7s ease .1s, transform 0.7s ease .1s;
 }
 
 /* Put name + Portfolio on one line */
@@ -184,7 +184,7 @@ code {
 /* Fade sequencing when splash is dismissed */
 .splash .logo,
 .splash .tagline {
-    transition: opacity .28s ease, transform .28s ease;
+    transition: opacity 0.7s ease, transform 0.7s ease;
     will-change: opacity, transform;
 }
 
@@ -198,11 +198,6 @@ code {
     opacity: 0;
     transform: translateY(-6px);
     transition-delay: .15s; /* then your name */
-}
-
-/* Container fade after text fades (keeps the sequence visible) */
-.splash {
-    transition: opacity .25s ease .22s, transform .25s ease .22s;
 }
 
 .logo {
@@ -291,7 +286,7 @@ code {
 
     .tech-item {
         width: 100%;
-        ensures each takes full column width display: flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -303,6 +298,7 @@ code {
         align-items: center;
         justify-items: center;
         text-align: center;
+        transition: opacity 1s ease .22s, transform 1s ease .22s;
     }
 
     .splash .splash-inner {
