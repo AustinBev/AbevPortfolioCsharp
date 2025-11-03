@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AbevPortfolioCsharp",
   "resources": {
-    "hash": "sha256-z3qmWpZ0LGF9xAx0ICIYvx/Oc0PaahfKS2Gx21b/bqw=",
+    "hash": "sha256-ayhTMK6PsZ8PRfURjY24bu6p/f5SSlNUvlvO4s+OE1A=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-9Fzd5We95Rp03dEKIAbYjPDR3eWyLbmjMlYStvxyiok="
     },
@@ -59,7 +59,7 @@
       "System.Text.RegularExpressions.wasm": "sha256-bgHcMwYyDPHEc4lW6il9ty+uFmAInP9+DTPYy1b0db4=",
       "System.wasm": "sha256-PUc71Jd5nvz5F65sAd0C3ZORcUzYK2JSfSDmE+Drn0Q=",
       "System.Private.CoreLib.wasm": "sha256-DV1G2F1fFsMD/+y729787GcacLzhx7rj/x9l6wDlU3w=",
-      "AbevPortfolioCsharp.wasm": "sha256-ojakQN86qtk5HrU7FYUNMlGZ+x3dXB3NR6giLzuW6i0="
+      "AbevPortfolioCsharp.wasm": "sha256-Xg5kvHvgj2vHtJd9TZxPRbEoj+LzJ/KGsFH1zR8dRec="
     }
   },
   "cacheBootResources": true,
