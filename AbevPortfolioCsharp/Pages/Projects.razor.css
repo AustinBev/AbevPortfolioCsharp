@@ -3,6 +3,15 @@
     color: white;
 }
 
+/* Wheelhouse logo above section title */
+.project-section img[src*="WH-Logo-Vertical_Sky.png"] {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 0 1rem 0; /* removes centering */
+    opacity: 0.9;
+}
+
 .project-title {
     font-size: 2rem;
     font-family: 'neuemontreal-bold';
@@ -128,4 +137,91 @@
     margin: 4rem auto 2rem auto;
     padding: 0 1rem;
     color: #ccc;
+}
+
+/* ===================== */
+/* Personal Projects - recolor   */
+/* ===================== */
+
+.personal-projects .project-card a {
+    color: #9af7b3;
+}
+
+.personal-projects .project-card a:hover {
+    color: #b4ffca;
+    text-decoration: underline;
+}
+
+/* Personal Projects section accent color */
+.personal-projects .project-section-title {
+    border-left-color: #9af7b3; /* pastel green, same brightness as blue/gold */
+    /*color: #d7ffe2;*/ /* soft off-white green tint */
+}
+
+.personal-projects .project-name {
+    color: #9af7b3; /* match the accent */
+}
+
+.personal-projects .project-link a {
+    color: #9af7b3;
+}
+
+.personal-projects .project-link a:hover {
+    color: #b4ffca;
+    text-decoration: underline;
+}
+
+/* ===================== */
+/* Freelance Projects    */
+/* ===================== */
+
+.freelance-projects {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    margin-top: 4rem;
+}
+
+.freelance-projects .project-section-title {
+    color: #ebebeb;
+    border-left-color: #ffd580; /* a soft gold accent to separate from Wheelhouse blue */
+}
+
+.freelance-projects .project-name {
+    color: #ffd580;
+}
+
+.freelance-projects .project-thumbnail {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.freelance-projects .project-details {
+    margin-left: 1.25rem;
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    list-style-type: "• ";
+}
+
+.freelance-projects .project-link a {
+    color: #ffd580;
+}
+
+.freelance-projects .project-link a:hover {
+    color: #fff0b3;
+    text-decoration: underline;
+}
+
+/* Schnee’s logo thumbnail size */
+.project-card img[src*="shnee_white.jpg"],
+.project-card img[src*="schnee_white.jpg"] {
+    max-width: 50px;
+    margin: 0 0 1rem 0; /* removes centering */
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    opacity: 0.95;
 }

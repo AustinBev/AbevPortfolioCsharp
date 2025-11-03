@@ -308,7 +308,10 @@ code {
     }
 
     .splash .logo {
-        font-size: 5rem !important;
+        font-size: clamp(3rem, 12vw, 5rem) !important;
+        word-break: break-word;
+        white-space: normal;
+        text-align: center;
     }
 
     .splash .tagline {
