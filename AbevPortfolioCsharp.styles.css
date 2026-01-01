@@ -1191,12 +1191,13 @@ h1[b-h7hc0k39yk], h2[b-h7hc0k39yk], h3[b-h7hc0k39yk], h4[b-h7hc0k39yk] {
     color: white;
 }
 
-/* Wheelhouse logo above section title */
-.project-section img[src*="WH-Logo-Vertical_Sky.png"][b-h7hc0k39yk] {
+/* Wheelhouse & Diametrix logos above section title */
+.project-section img[src*="WH-Logo-Vertical_Sky.png"][b-h7hc0k39yk],
+.project-section img[src*="DmxIcon.png"][b-h7hc0k39yk] {
     max-width: 150px;
     height: auto;
     display: block;
-    margin: 0 0 1rem 0; /* removes centering */
+    margin: 0; /* removes extra spacing, relies on flex gap */
     opacity: 0.9;
 }
 
